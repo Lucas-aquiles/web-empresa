@@ -1,95 +1,117 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-
+"use client";
+import styles from "./page.module.css";
+import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import React, { useEffect } from "react";
+import Services from "../components/services"
 export default function Home() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
+      <div
+        data-aos="fade-down"
+        data-aos-delay="400"
+        data-aos-duration="800"
+        className={styles.title}
+      >
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          <p>CUYO</p>
+        </div>
+
+        <div className={styles.title1}>
+          <p>HOME</p>
+          <p>SERVICES</p>
+          <p>ABOUT</p>
+          <p>BLOG</p>
+          <p>CONTACT</p>
         </div>
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div
+        data-aos="fade-right"
+        data-aos-delay="1000"
+        data-aos-duration="1500"
+        className={styles.partTwo}
+      >
+        <div className={styles.po}>
+          <p>CREATIVE MIND, CREATIVE WORKS.</p>
+          <h2>We are digital agency y consultora.</h2>
+        </div>
+        <div className={styles.pt}>
+          <Image
+            src="/lunes.jpg"
+            width={800}
+            height={600}
+            alt="Screenshots of the dashboard project showing desktop version"
+          />
+        </div>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
+{/* --------------------------------------------------------------------------- */}
+      <div className={styles.concepts}>
+        <div data-aos="fade-up"  data-aos-delay="100"
+        data-aos-duration="1000"
+        className={styles.panel}>
+          <Image
+            src="/paper-plane.svg"
+            width={80}
+            height={60}
+            alt="Screenshots of the dashboard project showing desktop version"
+          />
+          <h2>Pensamos el futuro</h2>
           <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+            Proyectamos el futuro en base a nuestros conocimientos científicos,
+            en el marco de la teoría de las Ciencias Sociales, las prácticas
+            cotidianas de las personas y el mundo de las tecnologias .
           </p>
-        </a>
+        </div>
+
+        <div  className={styles.centrar} data-aos="fade-up"  data-aos-delay="200"
+        data-aos-duration="1000">
+        <div className={styles.panelM}>
+
+          <Image
+            src="/brain.svg"
+            width={80}
+            height={60}
+            alt="Screenshots of the dashboard project showing desktop version"
+            className="iconColor"
+          />
+
+          <h2>Grandes Ideas</h2>
+          <p>
+            Aportamos conceptos segun las necesidades de los usuarios y
+            emprendedores. Donde cualquier idea puede ser disruptiva.
+          </p>
+          </div>
+          <div className={styles.myelement}></div>
+
+        </div>
+
+
+        <div className={styles.panel} data-aos="fade-up"  data-aos-delay="300"
+        data-aos-duration="1000">
+          <Image
+            src="/idea.svg"
+            width={80}
+            height={60}
+            alt="Screenshots of the dashboard project showing desktop version"
+            style={{
+              color: "red",
+            }}
+          />
+          <h2>Soluciones Creativas</h2>
+          <p>
+            Ya sea que busques transformar industrias enteras o mejorar procesos
+            cotidianos, nosotros no solo proporcionamos soluciones; creamos
+            experiencias revolucionarias.
+          </p>
+        </div>
       </div>
+      {/* --------------------------------------------------- */}
+            <Services/>
     </main>
-  )
+  );
 }
