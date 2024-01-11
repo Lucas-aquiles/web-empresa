@@ -74,12 +74,10 @@
   margin-top: 1rem;
   border: solid;
   border-color: #ffa300;
-  word-wrap: break-word; /* o overflow-wrap: break-word; para permitir el salto de palabra */
-  white-space: normal; /* Ajusta el espacio en blanco para que el texto se ajuste automáticamente */
-  display: flex;
-  flex-direction: column; /* Permite que el texto se ajuste verticalmente también */
-  align-items: center; /* Centra el contenido horizontalmente */
-  justify-content: center; /* Centra el contenido verticalmente */
+  /* display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;  */
 }
 
 .myelement {
@@ -94,3 +92,14 @@
 display: flex;
 flex-direction: column;
 align-items: center;}
+
+.line{
+  width: 50%;
+
+}
+.hra{
+  color:#ffa300;
+  width:30%;
+  border: solid thin;
+
+}

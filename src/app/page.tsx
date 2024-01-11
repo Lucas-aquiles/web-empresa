@@ -5,6 +5,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect } from "react";
 import Services from "../components/services"
+import { Line } from "react-native-svg";
+
 export default function Home() {
   useEffect(() => {
     AOS.init();
@@ -61,6 +63,7 @@ export default function Home() {
             alt="Screenshots of the dashboard project showing desktop version"
           />
           <h2>Pensamos el futuro</h2>
+          <div className={styles.hra}></div>
           <p>
             Proyectamos el futuro en base a nuestros conocimientos científicos,
             en el marco de la teoría de las Ciencias Sociales, las prácticas
