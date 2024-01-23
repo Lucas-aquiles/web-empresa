@@ -55,29 +55,31 @@
   justify-content: center;
 }
 .panel {
-  height: 21rem;
-  width: 21rem;
+  height: 23rem;
+  width: 23rem;
   background-color: rgb(45, 43, 43);
   margin: 1rem;
-  padding: 1rem;
+  padding: 2.5rem;
   color: white;
-  
+  transition: outline 0.3s ease; /* Agregamos transición para suavizar el cambio */
 
+  /* Bordes regulares sin afectar el tamaño del panel */
+  outline: solid 2.5px transparent;
   
 }
 .panelM{
-  height: 21rem;
-  width: 21rem;
+  height: 23rem;
+  width: 23rem;
   background-color: rgb(45, 43, 43);
   padding: 1rem;
   color: white;
   margin-top: 1rem;
-  border: solid;
-  border-color: #ffa300;
-  /* display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  justify-content: center;  */
+
+  /* Bordes regulares sin afectar el tamaño del panel */
+  outline: solid 2.5px #ffa300;
+  padding: 2.5rem;
+  box-sizing: border-box; 
+
 }
 
 .myelement {
@@ -86,6 +88,7 @@
   border-width: 2px; /* Cambiado a 2px para que la línea sea más visible */
   height: 30px; /* Ajusta la altura según tus necesidades */
   width: 0; 
+  margin-bottom: 1rem;
   
 }
 .centrar{
@@ -99,7 +102,23 @@ align-items: center;}
 }
 .hra{
   color:#ffa300;
-  width:30%;
-  border: solid thin;
+  width:20%;
+  border: solid 0.1rem;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+
 
 }
+
+.iconColor{
+  margin-top: 2rem;
+}
+.title5{
+  margin-top: 2rem;
+}
+.parrafo2{
+  text-align: justify
+}
+
+.panel:hover{
+  outline-color: #ffa300;}

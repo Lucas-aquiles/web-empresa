@@ -5,7 +5,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect } from "react";
 import Services from "../components/services"
-import { Line } from "react-native-svg";
 
 export default function Home() {
   useEffect(() => {
@@ -62,9 +61,9 @@ export default function Home() {
             height={60}
             alt="Screenshots of the dashboard project showing desktop version"
           />
-          <h2>Pensamos el futuro</h2>
+          <h2 className={styles.title5}>Pensamos el futuro</h2>
           <div className={styles.hra}></div>
-          <p>
+          <p className={styles.parrafo2}>
             Proyectamos el futuro en base a nuestros conocimientos científicos,
             en el marco de la teoría de las Ciencias Sociales, las prácticas
             cotidianas de las personas y el mundo de las tecnologias .
@@ -83,8 +82,10 @@ export default function Home() {
             className="iconColor"
           />
 
-          <h2>Grandes Ideas</h2>
-          <p>
+          <h2 className={styles.title5}>Grandes Ideas</h2>
+          <div className={styles.hra}></div>
+
+          <p className={styles.parrafo2}>
             Aportamos conceptos segun las necesidades de los usuarios y
             emprendedores. Donde cualquier idea puede ser disruptiva.
           </p>
@@ -105,8 +106,10 @@ export default function Home() {
               color: "red",
             }}
           />
-          <h2>Soluciones Creativas</h2>
-          <p>
+          <h2 className={styles.title5}>Soluciones Creativas</h2>
+          <div className={styles.hra}></div>
+
+          <p className={styles.parrafo2}>
             Ya sea que busques transformar industrias enteras o mejorar procesos
             cotidianos, nosotros no solo proporcionamos soluciones; creamos
             experiencias revolucionarias.
