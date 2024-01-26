@@ -3,9 +3,13 @@ import styles from "./services.module.css";
 export default function Services() {
   return (
     <div className={styles.generalDiv}>
-      <h3>Services.</h3>
+      
+      <div className={styles.centrar}> 
+      <div className={styles.lyne}></div>
+      <h3 className={styles.title}>Services.</h3>
+      </div>
+      <h3 className={styles.title1}>OUR SERVICES FOR CLIENTES</h3>
 
-      <h3>OUR SERVICES FOR CLIENTES</h3>
       <div className={styles.fathercontainer} >
 
         <div className={styles.container}>
