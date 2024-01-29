@@ -65,6 +65,8 @@
 
   /* Bordes regulares sin afectar el tamaño del panel */
   outline: solid 2.5px transparent;
+  overflow: hidden
+
   
 }
 .panelM{
@@ -79,6 +81,7 @@
   outline: solid 2.5px #ffa300;
   padding: 2.5rem;
   box-sizing: border-box; 
+  overflow: hidden
 
 }
 
@@ -92,6 +95,7 @@
   
 }
 .centrar{
+  width: auto;
 display: flex;
 flex-direction: column;
 align-items: center;}
