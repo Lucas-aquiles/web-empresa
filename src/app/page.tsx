@@ -1,11 +1,12 @@
 "use client";
+
 import styles from "./page.module.css";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect } from "react";
-import Services from "../components/services"
-import Idea from "../components/idea"
+import Services from "../components/services";
+import Idea from "../components/idea";
 
 export default function Home() {
   useEffect(() => {
@@ -19,8 +20,13 @@ export default function Home() {
         data-aos-duration="800"
         className={styles.title}
       >
-        <div>
-          <p>CUYO</p>
+        <div className={styles.imageicon}>
+          <Image
+            src="/fluuter3.svg"
+            width={150}
+            height={150}
+            alt="Screenshots of the dashboard project showing desktop version"
+          />
         </div>
 
         <div className={styles.title1}>
@@ -44,17 +50,17 @@ export default function Home() {
         </div>
         <div className={styles.pt}>
           <Image
-            src="/lunes.jpg"
-            width={800}
-            height={600}
+            src="/colibri.svg"
+            width={500}
+            height={500}
             alt="Screenshots of the dashboard project showing desktop version"
           />
         </div>
       </div>
-{/* --------------------------------------------------------------------------- */}
-            <Idea/>
+      {/* --------------------------------------------------------------------------- */}
+      <Idea />
       {/* --------------------------------------------------- */}
-            <Services/>
+      <Services />
     </main>
   );
 }

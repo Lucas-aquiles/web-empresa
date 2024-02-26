@@ -126,3 +126,9 @@ align-items: center;}
 
 .panel:hover{
   outline-color: #ffa300;}
+
+.imageicon{
+    position:absolute;
+    top: -20px;
+    left: 50px;
+  }
