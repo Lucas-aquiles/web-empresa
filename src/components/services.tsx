@@ -6,29 +6,29 @@ export default function Services() {
       
       <div className={styles.centrar}> 
       <div className={styles.lyne}></div>
-      <h3 className={styles.title}>Services.</h3>
+      <h3 className={styles.title}>Servicios.</h3>
       </div>
-      <h3 className={styles.title1}>OUR SERVICES FOR CLIENTES</h3>
+      <h3 className={styles.title1}>NUESTROS SERVICIOS PARA LOS CLIENTES</h3>
 
       <div className={styles.fathercontainer} >
 
         <div className={styles.container}>
-          <p>Digital Strategy</p>
+          <p>Estrategia Digital</p>
         </div>
 
         <div className={styles.container}>
-          <p>UX Designs</p>
+          <p>Diseños UX/IX</p>
         </div>
 
         <div className={styles.container}>
-          <p>Social Media</p>
+          <p>Redes Sociales</p>
         </div>
       </div>
 
 
       <div className={styles.fathercontainer}>
         <div className={styles.container}>
-          <p>Design Concept</p>
+          <p>Diseño Conceptual</p>
         </div>
 
         <div className={styles.container}>
@@ -36,7 +36,7 @@ export default function Services() {
         </div>
 
         <div className={styles.container}>
-          <p>UX Designs</p>
+          <p>Estadisticas</p>
         </div>
       </div>
     </div>

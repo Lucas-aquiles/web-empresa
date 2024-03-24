@@ -14,7 +14,8 @@
     width: 22rem;
     height: 22rem;
     background-color: rgb(45, 43, 43);
-    margin:1rem
+    margin:1rem;
+    color:white
 }
 .title{
     color:white;

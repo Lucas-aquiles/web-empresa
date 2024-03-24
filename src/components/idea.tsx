@@ -10,8 +10,8 @@ export default function Idea(){
         <div className={styles.father}>
     <div className={styles.concepts}>
         {/*  -----------------     */}
-    <div data-aos="fade-up"  data-aos-delay="100"
-    data-aos-duration="1000"
+    <div data-aos="fade-up"  data-aos-delay="700"
+    data-aos-duration="1500"
     className={styles.panel}>
       <Image
         src="/paper-plane.svg"
@@ -28,9 +28,9 @@ export default function Idea(){
       </p>
     </div>
         {/*  -----------------     */}
-
-    <div  className={styles.panelM} data-aos="fade-up"  data-aos-delay="200"
-    data-aos-duration="1000">
+        700
+    <div  className={styles.panelM} data-aos="fade-up"  data-aos-delay="700"
+    data-aos-duration="1500">
 
       <Image
         src="/brain.svg"
@@ -51,8 +51,8 @@ export default function Idea(){
 
         {/*  -----------------     */}
 
-    <div className={styles.panel} data-aos="fade-up"  data-aos-delay="300"
-    data-aos-duration="1000">
+    <div className={styles.panel} data-aos="fade-up"  data-aos-delay="700"
+    data-aos-duration="1500">
       <Image
         src="/idea.svg"
         width={80}
