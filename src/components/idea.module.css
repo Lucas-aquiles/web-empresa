@@ -30,7 +30,7 @@
     height: 23rem;
     width: 23rem;
     background-color: rgb(45, 43, 43);
-    margin: 1rem 1rem 0rem 1rem;
+    margin: 1rem 1.4rem 0rem 0rem;
     padding: 2.5rem;
     color: white;
     transition: outline 0.3s ease; /* Agregamos transición para suavizar el cambio */
@@ -87,6 +87,6 @@
     outline-color: #ffa300;}
 
     .father{
-    margin: 0rem 0rem 2rem 0rem;
+    margin: 0rem 0rem 4rem 0rem;
   
     }

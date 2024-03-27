@@ -14,13 +14,10 @@ export default function Home() {
   }, []);
   return (
     <main className={styles.main}>
-      <div
-        data-aos="fade-down"
+      <div className={styles.title}>
+        <div  data-aos="fade-zoom-in"  data-aos-offset="500" data-aos-easing="ease-in-sine"
         data-aos-delay="400"
-        data-aos-duration="800"
-        className={styles.title}
-      >
-        <div className={styles.imageicon}>
+        data-aos-duration="800" className={styles.imageicon}>
           <Image
             src="/fluuter3.svg"
             width={150}
@@ -29,34 +26,39 @@ export default function Home() {
           />
         </div>
 
-        <div className={styles.title1}>
-          <p>HOME</p>
-          <p>SERVICES</p>
-          <p>ABOUT</p>
-          <p>BLOG</p>
-          <p>CONTACT</p>
+        <div  data-aos="fade-zoom-in"  data-aos-offset="500" data-aos-easing="ease-in-sine"
+        data-aos-delay="400"
+        data-aos-duration="800" className={styles.title1}>
+          <p>INICIO</p>
+          <p>SERVICIOS</p>
+          <p>CONTACTO</p>
         </div>
-      </div>
-
-      <div
-        data-aos="fade-right"
-        data-aos-delay="1000"
-        data-aos-duration="1500"
-        className={styles.partTwo}
-      >
-        <div className={styles.po}>
-          <p>CREATIVE MIND, CREATIVE WORKS.</p>
-          <h2>We are digital agency y consultora.</h2>
-        </div>
-        <div className={styles.pt}>
+         <div className={styles.pt} >
           <Image
             src="/colibri.svg"
-            width={500}
-            height={500}
+            width={800}
+            height={800}
+            
             alt="Screenshots of the dashboard project showing desktop version"
           />
-        </div>
+        </div> 
       </div>
+
+      <div   
+        className={styles.partTwo}
+      >
+        <div   data-aos="fade-right" data-aos-easing="ease-in-sine"
+        data-aos-delay="2000"
+        data-aos-duration="2500" className={styles.po}>
+        <p>MENTE ALERTA , CREACIONES INNOVADORAS ..</p>
+        <h2>Agencia de Software </h2>
+        </div>
+        <div className={styles.relleno}></div>
+
+
+         </div>
+
+      
       {/* --------------------------------------------------------------------------- */}
       <Idea />
       {/* --------------------------------------------------- */}
