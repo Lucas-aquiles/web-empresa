@@ -1,0 +1,23 @@
+.row{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: center;
+    font-size: 1rem;
+}
+.containerFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+
+.myAdditionalClass{
+    padding-top: 0.5rem;
+    padding-left: 0.5REM;
+}
+.myAdditionalClass h3{
+    padding-left: 0.5REM;
+}

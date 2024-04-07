@@ -4,11 +4,30 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import React, { useEffect } from "react";
+import React, { useState,useEffect } from "react";
 import Services from "../components/services";
 import Idea from "../components/idea";
+import { animated, useSpring } from 'react-spring';
+import Footer from "@/components/footer/footer";
 
 export default function Home() {
+  const [x, setX] = useState(0);
+
+  const spring = useSpring({
+    x: x,
+    config: { mass: 1, tension: 170, friction: 40 }, // Adjust animation parameters
+  });
+
+  useEffect(() => {
+    const handleMouseMove = (event:any) => {
+      setX(event.clientX / window.innerWidth);
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   useEffect(() => {
     AOS.init();
   }, []);
@@ -29,18 +48,19 @@ export default function Home() {
         <div  data-aos="fade-zoom-in"  data-aos-offset="500" data-aos-easing="ease-in-sine"
         data-aos-delay="400"
         data-aos-duration="800" className={styles.title1}>
-          <p>INICIO</p>
           <p>SERVICIOS</p>
           <p>CONTACTO</p>
         </div>
          <div className={styles.pt} >
-          <Image
-            src="/colibri.svg"
-            width={800}
-            height={800}
-            
-            alt="Screenshots of the dashboard project showing desktop version"
-          />
+         <animated.img
+        style={{ transform: spring.x.interpolate(x => `rotateX(${x * 30}deg)`) }}
+        src="/colibri.svg"
+        alt="Hummingbird"
+        width={800}
+        height={800}
+      />
+
+
         </div> 
       </div>
 
@@ -63,6 +83,7 @@ export default function Home() {
       <Idea />
       {/* --------------------------------------------------- */}
       <Services />
+        <Footer/>
     </main>
   );
 }
