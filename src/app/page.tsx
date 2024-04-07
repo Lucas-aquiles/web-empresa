@@ -9,9 +9,13 @@ import Services from "../components/services";
 import Idea from "../components/idea";
 import { animated, useSpring } from 'react-spring';
 import Footer from "@/components/footer/footer";
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
+
+
 
 export default function Home() {
   const [x, setX] = useState(0);
+  const [scrollTo, setScrollTo] = useState(null);
 
   const spring = useSpring({
     x: x,
@@ -27,6 +31,32 @@ export default function Home() {
 
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
+
+  useEffect(() => {
+    
+    // Registering the 'begin' event and logging it to the console when triggered.
+    Events.scrollEvent.register('begin', (to, element) => {
+      console.log('begin', to, element);
+    });
+
+    // Registering the 'end' event and logging it to the console when triggered.
+    Events.scrollEvent.register('end', (to, element) => {
+      console.log('end', to, element);
+    });
+
+    // Updating scrollSpy when the component mounts.
+    scrollSpy.update();
+
+    // Returning a cleanup function to remove the registered events when the component unmounts.
+    return () => {
+      Events.scrollEvent.remove('begin');
+      Events.scrollEvent.remove('end');
+    };
+  }, []);
+
+  const handleSetActive = (to:any) => {
+    console.log(to);
+  };
 
   useEffect(() => {
     AOS.init();
@@ -48,8 +78,27 @@ export default function Home() {
         <div  data-aos="fade-zoom-in"  data-aos-offset="500" data-aos-easing="ease-in-sine"
         data-aos-delay="400"
         data-aos-duration="800" className={styles.title1}>
-          <p>SERVICIOS</p>
-          <p>CONTACTO</p>
+           <Link 
+      activeClass="active" 
+      to="test2" 
+      spy={true} 
+      smooth={true} 
+      duration={3000} 
+      onSetActive={handleSetActive}
+    >
+          <p  className={styles.texto}>SERVICIOS</p>
+    </Link>
+
+          <Link 
+      activeClass="active" 
+      to="test1" 
+      spy={true} 
+      smooth={true} 
+      duration={3000} 
+      onSetActive={handleSetActive}
+    >
+          <p className={styles.texto}>CONTACTO</p>
+    </Link>
         </div>
          <div className={styles.pt} >
          <animated.img
@@ -82,8 +131,15 @@ export default function Home() {
       {/* --------------------------------------------------------------------------- */}
       <Idea />
       {/* --------------------------------------------------- */}
+      <Element name="test2" className="element">
+
       <Services />
-        <Footer/>
+      </Element>
+
+      <Element name="test1" className="element">
+      <Footer />
+
+      </Element>
     </main>
   );
 }

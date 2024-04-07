@@ -157,3 +157,7 @@ align-items: center;}
     width: 800px;
     height: 700px;
   }
+  .texto{
+    margin-right: 3rem;
+    cursor: pointer;
+  }
