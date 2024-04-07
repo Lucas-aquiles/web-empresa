@@ -2,8 +2,22 @@
   height: auto;
   width: 100%;
   background-color: black;
+  max-width: 1440px;
+  position: relative;
+  margin: 0 auto;
 }
 
+.main::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -9999px; /* Coloca el pseudo-elemento más allá del límite izquierdo */
+  right: -9999px; /* Coloca el pseudo-elemento más allá del límite derecho */
+  background-color: black; /* Color de fondo negro */
+  z-index: -1;
+}
 .title {
   color: whitesmoke;
   text-align: end;
@@ -58,7 +72,8 @@
 
 .pt {
   position:absolute;
-  width: auto;
+  width: 800px; /* Establece el ancho al 100% para que ocupe todo el ancho del contenedor */
+      height: 800px;
   right: 0;
   top: 0;
   z-index: 10;
@@ -160,4 +175,46 @@ align-items: center;}
   .texto{
     margin-right: 3rem;
     cursor: pointer;
+  }
+
+
+  @media screen and (max-width: 1024px) {
+    .po > h2 {
+      font-size: 1.5rem; /* Reduces el tamaño del texto para adaptarse a la pantalla de 1024px */
+    }
+  }
+
+
+  @media screen and (max-width: 1024px) {
+    .pt {
+      width: 500px; /* Establece el ancho al 100% para que ocupe todo el ancho del contenedor */
+      height: 500px;
+    }
+    .relleno{
+      height: 400px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .parrafo2 {
+      font-size: 12px; /* Reduces el tamaño de fuente para adaptarse a pantallas de 1024px */
+    }
+    .pt {
+      width: 400px; /* Establece el ancho al 100% para que ocupe todo el ancho del contenedor */
+      height: 400px;
+    }
+
+    .partTwo h2{
+      font-size: 22px; /* Reduces el tamaño de fuente para adaptarse a pantallas de 1024px */
+
+    }
+    .partTwo p{
+      margin-bottom: 0.5rem;
+      font-size: 15px; /* Reduces el tamaño de fuente para adaptarse a pantallas de 1024px */
+
+    }
+    .po{
+      width: 35rem;
+    }
+
   }

@@ -90,3 +90,30 @@
     margin: 0rem 0rem 4rem 0rem;
   
     }
+
+
+    @media screen and (max-width: 1024px) {
+      .parrafo2 {
+        font-size: 14px; /* Reduces el tamaño de fuente para adaptarse a pantallas de 1024px */
+      }
+    }
+
+
+    @media screen and (max-width: 768px) {
+      .parrafo2 {
+        font-size: 12px; /* Reduces el tamaño de fuente para adaptarse a pantallas de 1024px */
+      }
+      .title5{
+        font-size: 18px;
+      }
+    .panel{
+      height: 20rem;
+      padding: 1rem;
+    }
+    .panelM{
+      height: 20rem;
+      padding: 1rem;
+
+
+    }
+    }

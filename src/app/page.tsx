@@ -4,14 +4,19 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Services from "../components/services";
 import Idea from "../components/idea";
-import { animated, useSpring } from 'react-spring';
+import { animated, useSpring } from "react-spring";
 import Footer from "@/components/footer/footer";
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
-
-
+import {
+  Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+} from "react-scroll";
 
 export default function Home() {
   const [x, setX] = useState(0);
@@ -23,25 +28,24 @@ export default function Home() {
   });
 
   useEffect(() => {
-    const handleMouseMove = (event:any) => {
+    const handleMouseMove = (event: any) => {
       setX(event.clientX / window.innerWidth);
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
 
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
   useEffect(() => {
-    
     // Registering the 'begin' event and logging it to the console when triggered.
-    Events.scrollEvent.register('begin', (to, element) => {
-      console.log('begin', to, element);
+    Events.scrollEvent.register("begin", (to, element) => {
+      console.log("begin", to, element);
     });
 
     // Registering the 'end' event and logging it to the console when triggered.
-    Events.scrollEvent.register('end', (to, element) => {
-      console.log('end', to, element);
+    Events.scrollEvent.register("end", (to, element) => {
+      console.log("end", to, element);
     });
 
     // Updating scrollSpy when the component mounts.
@@ -49,12 +53,12 @@ export default function Home() {
 
     // Returning a cleanup function to remove the registered events when the component unmounts.
     return () => {
-      Events.scrollEvent.remove('begin');
-      Events.scrollEvent.remove('end');
+      Events.scrollEvent.remove("begin");
+      Events.scrollEvent.remove("end");
     };
   }, []);
 
-  const handleSetActive = (to:any) => {
+  const handleSetActive = (to: any) => {
     console.log(to);
   };
 
@@ -64,9 +68,14 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.title}>
-        <div  data-aos="fade-zoom-in"  data-aos-offset="500" data-aos-easing="ease-in-sine"
-        data-aos-delay="400"
-        data-aos-duration="800" className={styles.imageicon}>
+        <div
+          data-aos="fade-zoom-in"
+          data-aos-offset="500"
+          data-aos-easing="ease-in-sine"
+          data-aos-delay="400"
+          data-aos-duration="800"
+          className={styles.imageicon}
+        >
           <Image
             src="/fluuter3.svg"
             width={150}
@@ -75,70 +84,70 @@ export default function Home() {
           />
         </div>
 
-        <div  data-aos="fade-zoom-in"  data-aos-offset="500" data-aos-easing="ease-in-sine"
-        data-aos-delay="400"
-        data-aos-duration="800" className={styles.title1}>
-           <Link 
-      activeClass="active" 
-      to="test2" 
-      spy={true} 
-      smooth={true} 
-      duration={3000} 
-      onSetActive={handleSetActive}
-    >
-          <p  className={styles.texto}>SERVICIOS</p>
-    </Link>
+        <div
+          data-aos="fade-zoom-in"
+          data-aos-offset="500"
+          data-aos-easing="ease-in-sine"
+          data-aos-delay="400"
+          data-aos-duration="800"
+          className={styles.title1}
+        >
+          <Link
+            activeClass="active"
+            to="test2"
+            spy={true}
+            smooth={true}
+            duration={3000}
+            onSetActive={handleSetActive}
+          >
+            <p className={styles.texto}>SERVICIOS</p>
+          </Link>
 
-          <Link 
-      activeClass="active" 
-      to="test1" 
-      spy={true} 
-      smooth={true} 
-      duration={3000} 
-      onSetActive={handleSetActive}
-    >
-          <p className={styles.texto}>CONTACTO</p>
-    </Link>
+          <Link
+            activeClass="active"
+            to="test1"
+            spy={true}
+            smooth={true}
+            duration={3000}
+            onSetActive={handleSetActive}
+          >
+            <p className={styles.texto}>CONTACTO</p>
+          </Link>
         </div>
-         <div className={styles.pt} >
-         <animated.img
-        style={{ transform: spring.x.interpolate(x => `rotateX(${x * 30}deg)`) }}
-        src="/colibri.svg"
-        alt="Hummingbird"
-        width={800}
-        height={800}
-      />
-
-
-        </div> 
+        <div className={styles.pt}>
+          <animated.img
+            style={{
+              transform: spring.x.interpolate((x) => `rotateX(${x * 30}deg)`),
+            }}
+            src="/colibri.svg"
+            alt="Hummingbird"
+          />
+        </div>
       </div>
 
-      <div   
-        className={styles.partTwo}
-      >
-        <div   data-aos="fade-right" data-aos-easing="ease-in-sine"
-        data-aos-delay="2000"
-        data-aos-duration="2500" className={styles.po}>
-        <p>MENTE ALERTA , CREACIONES INNOVADORAS ..</p>
-        <h2>Agencia de Software </h2>
+      <div className={styles.partTwo}>
+        <div
+          data-aos="fade-right"
+          data-aos-easing="ease-in-sine"
+          data-aos-delay="2000"
+          data-aos-duration="2500"
+          className={styles.po}
+        >
+          <p>MENTE ALERTA , CREACIONES INNOVADORAS ..</p>
+          <h2>Agencia de Software </h2>
         </div>
         <div className={styles.relleno}></div>
+      </div>
 
-
-         </div>
-
-      
       {/* --------------------------------------------------------------------------- */}
       <Idea />
       {/* --------------------------------------------------- */}
       <Element name="test2" className="element">
-
-      <Services />
+        <Services />
       </Element>
 
       <Element name="test1" className="element">
-      <Footer />
-
+        <Footer />
       </Element>
     </main>
   );

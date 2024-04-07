@@ -7,9 +7,9 @@ export default function Services() {
     <div className={styles.generalDiv}>
       <div className={styles.centrar}>
         <div className={styles.lyne}></div>
-        <h3 className={styles.title}>Servicios.</h3>
+        <h2 className={styles.title}>Servicios.</h2>
       </div>
-      <h3 className={styles.title1}>NUESTROS SERVICIOS PARA LOS CLIENTES</h3>
+      <h4 className={styles.title1}>NUESTROS SERVICIOS PARA LOS CLIENTES</h4>
 
       <div className={styles.fathercontainer}>
         <div className={styles.container}>
@@ -20,7 +20,8 @@ export default function Services() {
             alt="Screenshots of the dashboard project showing desktop version"
           />
           <h3>Soluciones Digitales </h3>
-          <p>
+          <p className={styles.parrafo2}>
+
             Desarrollo de Aplicaciones Web, Software Internos y Aplicaciones
             Móviles
           </p>
@@ -35,7 +36,7 @@ export default function Services() {
             alt="Screenshots of the dashboard project showing desktop version"
           />
           <h3>Estrategia Digital</h3>
-          <p>
+          <p className={styles.parrafo2}>
             Aprovecha al máximo las oportunidades que ofrece el entorno digital
             para alcanzar tus objetivos comerciales
           </p>
@@ -51,7 +52,7 @@ export default function Services() {
             alt="Screenshots of the dashboard project showing desktop version"
           />
           <h3>Diseños UX/IX</h3>
-          <p>
+          <p className={styles.parrafo2}>
             Pensamos y diseñamos , productos digitales que sean intuitivos,
             atractivos y satisfactorios para los usuarios
           </p>
@@ -60,6 +61,8 @@ export default function Services() {
         </div>
       </div>
 
+
+{/*----------------------------------------------------------------------------------------------------------------------*/}
       <div className={styles.fathercontainer}>
         <div className={styles.container}>
           <Image
@@ -69,8 +72,8 @@ export default function Services() {
             alt="Screenshots of the dashboard project showing desktop version"
           />
           <h3>Consultoria</h3>
-          <p>
-            {" "}
+          <p className={styles.parrafo2}>
+
             Análisis de Mercado y Opinión Pública. Mapeamos el clima social y la
             penetración y aceptación de marcas y productos mediante
             investigación cualitativa y cuantitativa.
@@ -87,7 +90,8 @@ export default function Services() {
             alt="Screenshots of the dashboard project showing desktop version"
           />
           <h3>Automatización </h3>
-          <p>
+          <p className={styles.parrafo2}>
+
             Desarrollar sistemas y flujos de trabajo automatizados para agilizar
             el procesamiento de datos y reducir la intervención humana en tareas
             repetitivas o rutinarias
@@ -103,12 +107,13 @@ export default function Services() {
             height={70}
             alt="Screenshots of the dashboard project showing desktop version"
           />
-          <h3> Investigación Cualitativa: </h3>
-          <p> Grupos Focales</p>
-          <p> Entrevistas en Profundidad </p>
+          <h3 >
+             Investigación Cualitativa: </h3>
+          <p className={styles.parrafo2}> Grupos Focales</p>
+          <p className={styles.parrafo2}> Entrevistas en Profundidad </p>
           <h3> Investigación Cuantitativa: </h3>
-          <p> Entrevistas Domiciliarias</p>
-          <p> Entrevistas Telefónicas</p>
+          <p className={styles.parrafo2}> Entrevistas Domiciliarias</p>
+          <p className={styles.parrafo2}> Entrevistas Telefónicas</p>
           <div className={styles.lineaDiv}></div>
 
         </div>
