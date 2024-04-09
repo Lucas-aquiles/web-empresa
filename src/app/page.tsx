@@ -78,6 +78,7 @@ export default function Home() {
         >
           <Image
             src="/fluuter3.svg"
+            layout="responsive"
             width={150}
             height={150}
             alt="Screenshots of the dashboard project showing desktop version"

@@ -117,3 +117,37 @@
 
     }
     }
+
+
+
+    @media screen and (max-width: 425px) {
+      .concepts {
+        margin:0rem;
+       display: flex;
+       flex-direction: column;
+      
+        font-size: 10px;/* Reduces el tamaño de fuente para adaptarse a pantallas de 1024px */
+      }
+      .panel{
+        margin: 0 auto;
+        width: 350px;
+        height: 15rem;
+        display: flex;
+       flex-direction: column;
+      }
+      .panelM{
+        margin: 0 auto;
+        width: 350px;
+        height: 15rem;
+        display: flex;
+       flex-direction: column;
+      }
+     .title5{
+      font-size: 15px;
+
+     }
+     .panelH{
+      margin-top: 1rem;
+     }
+      
+    }

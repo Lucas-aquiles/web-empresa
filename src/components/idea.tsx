@@ -18,6 +18,7 @@ export default function Idea() {
             src="/paper-plane.svg"
             width={80}
             height={60}
+            
             alt="Screenshots of the dashboard project showing desktop version"
           />
           <h2 className={styles.title5}>Pensamos el futuro</h2>
@@ -55,7 +56,7 @@ export default function Idea() {
         
         {/*  -----------------     */}
         <div
-          className={styles.panel}
+          className={`${styles.panel} ${styles.panelH}`}
           data-aos="fade-up"
           data-aos-delay="700"
           data-aos-duration="1500"
