@@ -162,9 +162,9 @@ align-items: center;}
 
 .imageicon{
     position:absolute;
-    top: -20px;
+    top: 10px;
     left: 4rem;
-    
+    width: 200px;
   }
 
   .relleno{
@@ -236,10 +236,10 @@ align-items: center;}
 
     }
    .imageicon{
-    top: 0.3rem;
+    top: 0.6rem;
     left:1rem;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
    }
    .pt{
     width: 13rem;
