@@ -24,7 +24,7 @@ export default function Home() {
 
   const spring = useSpring({
     x: x,
-    config: { mass: 1, tension: 170, friction: 40 }, // Adjust animation parameters
+    config: { mass: 10, tension: 300, friction: 40 }, // Adjust animation parameters
   });
 
   useEffect(() => {
