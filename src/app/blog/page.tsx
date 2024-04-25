@@ -5,7 +5,7 @@ export default function Blog() {
     <main >
       
 
-    
+  
       <h1>blog.js!</h1>
      
        
