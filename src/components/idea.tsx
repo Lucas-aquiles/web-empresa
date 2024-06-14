@@ -14,13 +14,16 @@ export default function Idea() {
           data-aos-duration="1500"
           className={styles.panel}
         >
+          <div className={styles.containerImage}> 
           <Image
             src="/paper-plane.svg"
-            width={80}
-            height={60}
-            
+            width={40}
+            height={40}
+            layout="responsive"
             alt="Screenshots of the dashboard project showing desktop version"
           />
+          </div>
+
           <h2 className={styles.title5}>Pensamos el futuro</h2>
           <div className={styles.hra}></div>
           <p className={styles.parrafo2}>
@@ -36,12 +39,15 @@ export default function Idea() {
           data-aos-delay="700"
           data-aos-duration="1500"
         >
+            <div className={styles.containerImage}> 
           <Image
             src="/brain.svg"
-            width={80}
-            height={60}
+            width={40}
+            height={40}
+            layout="responsive"
             alt="Screenshots of the dashboard project showing desktop version"
           />
+          </div>
 
           <h2 className={styles.title5}>Grandes Ideas</h2>
           <div className={styles.hra}></div>
@@ -61,12 +67,16 @@ export default function Idea() {
           data-aos-delay="700"
           data-aos-duration="1500"
         >
+                      <div className={styles.containerImage}> 
+
           <Image
             src="/idea.svg"
-            width={80}
-            height={60}
+            width={40}
+            height={40}
+            layout="responsive"
             alt="Screenshots of the dashboard project showing desktop version"
           />
+          </div>
           <h2 className={styles.title5}>Soluciones Creativas</h2>
           <div className={styles.hra}></div>
 

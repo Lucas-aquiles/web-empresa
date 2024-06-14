@@ -90,6 +90,9 @@
     margin: 0rem 0rem 4rem 0rem;
   
     }
+  .containerImage{
+    width: 3rem;
+  }
 
 
     @media screen and (max-width: 1024px) {
@@ -150,4 +153,8 @@
       margin-top: 1rem;
      }
       
+     .containerImage{
+      width: 2rem;
+    }
+
     }

@@ -80,7 +80,14 @@ position: relative;
     .lineaDiv{       background-color: #ffa300;
     }
 }
+.containerImage{
 
+    width: 5rem;
+}
+.containerImage1{
+
+    width: 4rem;
+}
 @media screen and (max-width: 1024px) {
     .parrafo2 {
       font-size: 14px; /* Reduces el tamaño de fuente para adaptarse a pantallas de 1024px */
@@ -164,6 +171,8 @@ position: relative;
         padding: 0;
         width: 15rem;
         margin: 0;
+        text-align: center;
+
         margin-right: 0.5rem;
 
     }
@@ -184,6 +193,20 @@ position: relative;
     margin-top: 1rem;
 
 }
+.containerImage{
+    width: 2rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+
+
+  }
+  .containerImage1{
+    width: 2rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+
+
+  }
 
 
     }

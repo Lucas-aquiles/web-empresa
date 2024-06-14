@@ -3,7 +3,7 @@
     flex-direction: row;
     color: white;
     align-items: center;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 .containerFooter{
     display: flex;

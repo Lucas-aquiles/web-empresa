@@ -13,12 +13,16 @@ export default function Services() {
 
       <div className={styles.fathercontainer}>
         <div className={styles.container}>
+        <div className={styles.containerImage}> 
           <Image
             src="/titulo1.svg"
             width={70}
             height={70}
+             layout="responsive"
             alt="Screenshots of the dashboard project showing desktop version"
           />
+          </div>
+          
           <h3>Soluciones Digitales </h3>
           <p className={styles.parrafo2}>
 
@@ -29,12 +33,18 @@ export default function Services() {
           <div className={styles.lineaDiv}></div>
         </div>
         <div className={styles.container}>
+
+        <div className={styles.containerImage}> 
+
           <Image
             src="/titulo2.svg"
             width={70}
             height={70}
+             layout="responsive"
             alt="Screenshots of the dashboard project showing desktop version"
           />
+        </div>
+
           <h3>Estrategia Digital</h3>
           <p className={styles.parrafo2}>
             Aprovecha al máximo las oportunidades que ofrece el entorno digital
@@ -45,12 +55,18 @@ export default function Services() {
         </div>
 
         <div className={styles.container1}>
+        <div className={styles.containerImage1}> 
+
           <Image
             src="/titulo3.svg"
-            width={70}
-            height={70}
+            width={20}
+            height={20}
+            layout="responsive"
+
             alt="Screenshots of the dashboard project showing desktop version"
           />
+      </div>
+
           <h3>Diseños UX/IX</h3>
           <p className={styles.parrafo2}>
             Pensamos y diseñamos , productos digitales que sean intuitivos,
@@ -65,12 +81,17 @@ export default function Services() {
 {/*----------------------------------------------------------------------------------------------------------------------*/}
       <div className={styles.fathercontainer}>
         <div className={styles.container}>
+        <div className={styles.containerImage}> 
+
           <Image
             src="/titulo4.svg"
             width={70}
             height={70}
+            layout="responsive"
+
             alt="Screenshots of the dashboard project showing desktop version"
           />
+          </div>
           <h3>Consultoria</h3>
           <p className={styles.parrafo2}>
 
@@ -83,12 +104,18 @@ export default function Services() {
         </div>
 
         <div className={styles.container}>
+                  <div className={styles.containerImage}> 
+
           <Image
             src="/titulo5.svg"
             width={70}
             height={70}
+            layout="responsive"
+
             alt="Screenshots of the dashboard project showing desktop version"
           />
+
+          </div>
           <h3>Automatización </h3>
           <p className={styles.parrafo2}>
 
@@ -101,12 +128,17 @@ export default function Services() {
         </div>
 
         <div className={styles.container}>
+        <div className={styles.containerImage}> 
+
           <Image
             src="/titulo6.svg"
             width={70}
             height={70}
+            layout="responsive"
+
             alt="Screenshots of the dashboard project showing desktop version"
           />
+          </div>
           <h3 >
              Investigación Cualitativa: </h3>
           <p className={styles.parrafo2}> Grupos Focales</p>
