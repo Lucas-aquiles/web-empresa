@@ -17,6 +17,8 @@ import {
   animateScroll as scroll,
   scrollSpy,
 } from "react-scroll";
+import Head from 'next/head'
+
 
 export default function Home() {
   const [x, setX] = useState(0);
@@ -67,6 +69,13 @@ export default function Home() {
   }, []);
   return (
     <main className={styles.main}>
+       <Head>
+          <title>Root Software</title>
+        <meta charSet="UTF-8" />
+        <meta name="description" content="Root Software" />
+        <meta name="author" content="Lucas Echegaray" />
+        <meta name="twitter:title" content="Root Software" />
+        </Head>
       <div className={styles.title}>
         <div
           data-aos="fade-zoom-in"
