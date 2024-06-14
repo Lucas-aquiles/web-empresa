@@ -29,6 +29,7 @@ export default function RootLayout({
         <meta name="description" content="Root Software" />
         <meta name="description" content="empresa de software" />
         <meta name="description" content="Mendoza" />
+        <meta name="description" content="Argentina" />
         <meta name="author" content="Lucas Echegaray" />
         <meta name="twitter:title" content="Root Software" />
         </Head>
